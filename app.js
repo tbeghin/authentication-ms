@@ -9,7 +9,7 @@ const passport = require('passport');
 const configDB = require('./config/database.js');
 const app = express();
 
-require('./config/passport')(passport);
+require('./strategy/facebook')(passport);
 mongoose.connect(configDB.url);
 
 // view engine setup
