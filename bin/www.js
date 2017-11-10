@@ -13,7 +13,7 @@ app.set('port', port);
  * Create HTTP server.
  */
 
-let server = http.createServer(app);
+const server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -29,14 +29,11 @@ server.on('listening', onListening);
 
 function normalizePort(val) {
     let port = parseInt(val, 10);
-
     if (isNaN(port)) {
-        // named pipe
         return val;
     }
 
     if (port >= 0) {
-        // port number
         return port;
     }
 
